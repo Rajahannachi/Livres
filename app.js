@@ -7,6 +7,8 @@ import routerAuthor from "./routes/author.js";
 import routerCategory from "./routes/category.js";
 import routerLivres from "./routes/Livres.js";
 
+import eventRoutes from "./routes/eventRoutes.js";
+
 const app = express();
 
 // Middleware
@@ -17,6 +19,7 @@ app.use("/api/livres", routerLivres);
 app.use("/api/author", routerAuthor);
 app.use("/api/auth", routerAuth);
 app.use("/api/categories", routerCategory);
+app.use("/api", eventRoutes); 
 
 const DB_URI =
   "mongodb+srv://rajahannachi21:raja123@cluster0.aitqm.mongodb.net/DB_Livres";
