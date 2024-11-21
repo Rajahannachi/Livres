@@ -1,11 +1,11 @@
+import cors from "cors";
 import express from "express";
 import mongoose from "mongoose";
-import cors from "cors";
 
 import routerAuth from "./routes/auth.js";
 import routerAuthor from "./routes/author.js";
-import routerLivres from "./routes/Livres.js";
 import routerCategory from "./routes/category.js";
+import routerLivres from "./routes/Livres.js";
 
 const app = express();
 
@@ -21,7 +21,7 @@ app.use("/api/categories", routerCategory);
 
 // Database connection
 const DB_URI =
-  "mongodb+srv://farahabbes210:isamm123@cluster0.2gfls.mongodb.net/DB_Livres";
+  "mongodb+srv://rajahannachi21:raja123@cluster0.aitqm.mongodb.net/DB_Livres";
 
 mongoose
   .connect(DB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
