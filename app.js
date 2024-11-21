@@ -13,13 +13,11 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// Routes
 app.use("/api/livres", routerLivres);
 app.use("/api/author", routerAuthor);
 app.use("/api/auth", routerAuth);
 app.use("/api/categories", routerCategory);
 
-// Database connection
 const DB_URI =
   "mongodb+srv://rajahannachi21:raja123@cluster0.aitqm.mongodb.net/DB_Livres";
 

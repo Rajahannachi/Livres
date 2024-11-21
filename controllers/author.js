@@ -1,5 +1,4 @@
 import Author from "../models/author.js";
-// Fetch all books
 export const fetchAuthors = async (req, res) => {};
 export const fetchAuthor = async (req, res) => {};
 export const createAuthor = async (req, res) => {

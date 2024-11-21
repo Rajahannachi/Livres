@@ -1,5 +1,5 @@
-import User from "../models/auth.js";
 import bcrypt from "bcrypt";
+import User from "../models/auth.js";
 
 export const signUp = async (req, res) => {
   try {
@@ -9,8 +9,6 @@ export const signUp = async (req, res) => {
       password: hashedPWD,
     });
     await user.save();
-    //delete user.password;
-    //... khoudh les champ elii bqaw f user b khlef password elli nheb nahhih f instanciation
     const { password, ...newUser } = user.toObject();
     res.status(200).json({ model: newUser, message: "success" });
   } catch (error) {
