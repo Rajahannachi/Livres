@@ -1,7 +1,6 @@
-import eventSchema from "C:UsersUSERDesktoplivres\validationeventValidation.js";
-
+import EventSchema from "../models/Event.js";
 const validateEvent = (req, res, next) => {
-  const { error } = eventSchema.validate(req.body, { abortEarly: false });
+  const { error } = EventSchema.validate(req.body, { abortEarly: false });
 
   if (error) {
     const errorMessages = error.details.map((detail) => detail.message);

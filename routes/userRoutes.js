@@ -1,6 +1,6 @@
 import express from 'express';
 import { signupUser } from '../controllers/userController.js'; // Importer votre contrôleur pour gérer l'inscription
-import validateSignup from '../middlewares/validation.js'; // Importer le middleware de validation
+import validateSignup from '../Middelware/validation.js'; // Importer le middleware de validation
 
 const router = express.Router();
 

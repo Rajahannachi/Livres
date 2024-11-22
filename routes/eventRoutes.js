@@ -1,6 +1,8 @@
+// routes/eventRoutes.js
 import express from "express";
 import { createEvent, fetchEvents } from "../controllers/eventController.js";
-import validateEvent from "../middlewares/validateEvent.js";
+import validateEvent from "../Middelware/validateEvent.js";
+
 
 const router = express.Router();
 
